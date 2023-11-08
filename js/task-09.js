@@ -4,7 +4,7 @@ console.log(buttonEL);
 const counterColor = document.querySelector('.color');
 console.log(counterColor);
 
-const container = document.querySelector('div');
+const container = document.querySelector('body');
 console.log(container);
 
 buttonEL.addEventListener('click', () => {

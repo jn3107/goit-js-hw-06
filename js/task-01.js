@@ -1,9 +1,9 @@
-const navItemEl = document.querySelectorAll('.item');
-console.log(`Number of categories: ${navItemEl.length}`);
+const navlistEl = document.querySelector('#categories');
+const navItemEl = navlistEl.children;
+console.log(`Number of categoris: ${navItemEl.length}`);
 
-navItemEl.forEach(category => {
-    const navTitleEL = category.querySelector('h2').textContent;
-    const navCountEl = category.querySelectorAll('ul > li').length;
-    console.log(`Category: ${navTitleEL}`);
-    console.log(`Elements: ${navCountEl}`);
-    });
+[...navlistEl.children].forEach(item => {
+    const navEl = item.lastElementChild.children
+    console.log(`Category: ${item.firstElementChild.textContent}`);
+    console.log(`Elements: ${navEl.length}`);
+});
